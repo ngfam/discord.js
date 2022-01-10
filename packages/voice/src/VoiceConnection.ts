@@ -261,10 +261,14 @@ export class VoiceConnection extends TypedEmitter<VoiceConnectionEvents> {
 	 */
 	public set state(newState: VoiceConnectionState) {
 		const oldState = this._state;
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 		const oldNetworking: Networking | undefined = Reflect.get(oldState, 'networking');
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 		const newNetworking: Networking | undefined = Reflect.get(newState, 'networking');
 
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 		const oldSubscription: PlayerSubscription | undefined = Reflect.get(oldState, 'subscription');
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 		const newSubscription: PlayerSubscription | undefined = Reflect.get(newState, 'subscription');
 
 		if (oldNetworking !== newNetworking) {
@@ -365,6 +369,7 @@ export class VoiceConnection extends TypedEmitter<VoiceConnectionEvents> {
 			newUdp?.on('message', this.receiver.onUdpMessage);
 		}
 
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 		this.receiver.connectionData = Reflect.get(newState, 'connectionData') ?? {};
 	}
 

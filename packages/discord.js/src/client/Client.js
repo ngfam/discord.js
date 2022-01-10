@@ -1,7 +1,7 @@
 'use strict';
 
-const process = require('node:process');
 const { Collection } = require('@discordjs/collection');
+const process = require('node:process');
 const BaseClient = require('./BaseClient');
 const ActionsManager = require('./actions/ActionsManager');
 const ClientVoiceManager = require('./voice/ClientVoiceManager');

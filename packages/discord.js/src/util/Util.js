@@ -1,8 +1,8 @@
 'use strict';
 
-const { parse } = require('node:path');
 const { Collection } = require('@discordjs/collection');
 const fetch = require('node-fetch');
+const { parse } = require('node:path');
 const { Colors, Endpoints } = require('./Constants');
 const Options = require('./Options');
 const { Error: DiscordError, RangeError, TypeError } = require('../errors');

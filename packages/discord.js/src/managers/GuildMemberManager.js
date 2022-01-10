@@ -1,9 +1,9 @@
 'use strict';
 
-const { Buffer } = require('node:buffer');
-const { setTimeout } = require('node:timers');
 const { Collection } = require('@discordjs/collection');
 const { DiscordSnowflake } = require('@sapphire/snowflake');
+const { Buffer } = require('node:buffer');
+const { setTimeout } = require('node:timers');
 const CachedManager = require('./CachedManager');
 const { Error, TypeError, RangeError } = require('../errors');
 const BaseGuildVoiceChannel = require('../structures/BaseGuildVoiceChannel');

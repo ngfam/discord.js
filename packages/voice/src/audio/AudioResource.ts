@@ -151,6 +151,7 @@ export class AudioResource<T = unknown> {
 			this.silenceRemaining--;
 			return SILENCE_FRAME;
 		}
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 		const packet: Buffer | null = this.playStream.read();
 		if (packet) {
 			this.playbackDuration += 20;
