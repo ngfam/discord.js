@@ -176,7 +176,7 @@ class GuildMemberManager extends CachedManager {
   fetch(options) {
     if (!options) return this._fetchMany();
     const user = this.client.users.resolveId(options);
-    if (user) return this._fetchSingle({ user, cache: true });
+    if (user) return this._fetchSingle({ user, cache: options.cache, force: options.force });
     if (options.user) {
       if (Array.isArray(options.user)) {
         options.user = options.user.map(u => this.client.users.resolveId(u));
